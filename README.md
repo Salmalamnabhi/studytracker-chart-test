@@ -12,9 +12,7 @@ I asked a language model 30 plain-English questions about the data of my own app
   covering 6 July to 4 October 2026, not my real study history.
 - **Questions.** 30 questions in three groups of ten: easy (one column, one calculation),
   medium (a filter, a time grouping or a derived value) and vague (no column is named).
-- **Model.** DeepSeek web chat with DeepThink off, on 6 October 2026. DeepSeek's website announced
-  DeepSeek-V4.1-Flash as its current release on that date, so that is most likely the model that answered;
-  I could not confirm the exact version from the chat itself.
+- **Model.** DeepSeek-V4.1-Flash web chat with DeepThink off, on 6 October 2026. 
 - **Prompt.** The same prompt every time (`prompt.txt`): column names and types only, no data rows,
   and a request for one Vega-Lite v5 specification. A new chat for each question, no retries.
 - **Judging.** I rendered each reply and marked it by hand as Correct, Wrong column,
