@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "study_sessions.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "subject", "type": "nominal", "sort": "-y", "title": "Subject"},
+    "y": {
+      "aggregate": "mean",
+      "field": "hours",
+      "type": "quantitative",
+      "title": "Average session length (hours)"
+    }
+  }
+}

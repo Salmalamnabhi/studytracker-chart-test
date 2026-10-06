@@ -1,0 +1,98 @@
+id,subject,date,hours,difficulty,note,timestamp,userId
+1,Software Engineering,2026-07-06,1.0,Medium,Sprint report,1783334340000,1
+2,Computer Networks,2026-07-06,0.5,Easy,TCP congestion control,1783342800000,1
+3,Machine Learning,2026-07-10,1.5,Hard,,1783693140000,1
+4,Computer Networks,2026-07-11,1.5,Medium,Lab report,1783776960000,1
+5,Software Engineering,2026-07-11,2.0,Easy,Sprint report,1783770720000,1
+6,Chinese (HSK),2026-07-12,0.5,Medium,Mock reading test,1783866300000,1
+7,Operating Systems,2026-07-12,1.5,Hard,Lab: threads,1783862820000,1
+8,Machine Learning,2026-07-13,1.5,Hard,Decision trees chapter,1783949700000,1
+9,Database Systems,2026-07-13,1.5,Easy,Normalization exercises,1783950240000,1
+10,Machine Learning,2026-07-16,2.0,Medium,,1784196000000,1
+11,Database Systems,2026-07-16,1.0,Medium,SQL joins practice,1784200020000,1
+12,Chinese (HSK),2026-07-16,1.0,Medium,,1784205720000,1
+13,Computer Networks,2026-07-18,1.0,Medium,Lab report,1784370360000,1
+14,Database Systems,2026-07-23,2.0,Easy,Normalization exercises,1784802720000,1
+15,Operating Systems,2026-07-24,1.0,Medium,,1784903100000,1
+16,Database Systems,2026-07-24,1.5,Easy,SQL joins practice,1784889660000,1
+17,Computer Networks,2026-07-27,2.0,Medium,HTTP and DNS review,1785147840000,1
+18,Chinese (HSK),2026-07-27,2.0,Medium,Mock reading test,1785159060000,1
+19,Database Systems,2026-07-30,2.0,Easy,Transactions and locking,1785409260000,1
+20,Operating Systems,2026-07-31,1.5,Medium,Deadlock chapter,1785506880000,1
+21,Operating Systems,2026-08-01,1.0,Hard,Deadlock chapter,1785582960000,1
+22,Machine Learning,2026-08-02,2.0,Easy,Assignment debugging,1785674940000,1
+23,Operating Systems,2026-08-03,1.0,Hard,Deadlock chapter,1785758580000,1
+24,Database Systems,2026-08-03,2.5,Medium,Normalization exercises,1785761040000,1
+25,Chinese (HSK),2026-08-04,3.0,Easy,Vocabulary flashcards,1785843180000,1
+26,Database Systems,2026-08-04,2.5,Easy,Indexing chapter,1785839220000,1
+27,Operating Systems,2026-08-05,2.5,Medium,Memory paging problems,1785927660000,1
+28,Database Systems,2026-08-06,1.5,Medium,,1786020000000,1
+29,Chinese (HSK),2026-08-06,0.5,Easy,,1786015800000,1
+30,Software Engineering,2026-08-07,1.0,Easy,Sprint report,1786105320000,1
+31,Computer Networks,2026-08-08,2.0,Hard,HTTP and DNS review,1786185600000,1
+32,Chinese (HSK),2026-08-09,1.0,Medium,Vocabulary flashcards,1786281840000,1
+33,Chinese (HSK),2026-08-15,1.0,Easy,Vocabulary flashcards,1786804860000,1
+34,Computer Networks,2026-08-17,2.0,Hard,TCP congestion control,1786968240000,1
+35,Database Systems,2026-08-17,1.5,Easy,SQL joins practice,1786962000000,1
+36,Database Systems,2026-08-18,2.0,Medium,ER diagram for project,1787062920000,1
+37,Computer Networks,2026-08-18,2.5,Easy,Lab report,1787057280000,1
+38,Machine Learning,2026-08-19,2.5,Medium,Assignment debugging,1787142360000,1
+39,Machine Learning,2026-08-21,2.5,Hard,Assignment debugging,1787312100000,1
+40,Software Engineering,2026-08-23,1.0,Medium,Sprint report,1787491320000,1
+41,Computer Networks,2026-08-23,1.5,Medium,Lab report,1787496240000,1
+42,Database Systems,2026-08-24,1.5,Easy,Indexing chapter,1787572860000,1
+43,Chinese (HSK),2026-08-27,0.5,Easy,Listening practice,1787824860000,1
+44,Database Systems,2026-08-27,1.0,Easy,SQL joins practice,1787841960000,1
+45,Computer Networks,2026-08-28,1.5,Medium,HTTP and DNS review,1787919360000,1
+46,Software Engineering,2026-08-30,1.5,Medium,Requirements document,1788097140000,1
+47,Chinese (HSK),2026-08-31,1.0,Hard,Grammar patterns,1788173940000,1
+48,Database Systems,2026-08-31,3.5,Medium,ER diagram for project,1788174780000,1
+49,Operating Systems,2026-09-01,1.0,Medium,,1788260940000,1
+50,Chinese (HSK),2026-09-01,1.5,Medium,,1788263160000,1
+51,Software Engineering,2026-09-02,2.0,Easy,UML diagrams,1788349380000,1
+52,Database Systems,2026-09-02,1.5,Easy,ER diagram for project,1788357660000,1
+53,Computer Networks,2026-09-03,1.0,Medium,,1788439680000,1
+54,Database Systems,2026-09-03,2.5,Easy,Normalization exercises,1788442920000,1
+55,Computer Networks,2026-09-04,1.0,Medium,HTTP and DNS review,1788519360000,1
+56,Chinese (HSK),2026-09-04,0.5,Hard,,1788518880000,1
+57,Chinese (HSK),2026-09-05,2.0,Hard,,1788612420000,1
+58,Database Systems,2026-09-05,1.5,Easy,Transactions and locking,1788616560000,1
+59,Operating Systems,2026-09-06,2.5,Medium,,1788690540000,1
+60,Database Systems,2026-09-07,2.0,Easy,Transactions and locking,1788788340000,1
+61,Computer Networks,2026-09-07,1.5,Hard,TCP congestion control,1788786300000,1
+62,Chinese (HSK),2026-09-08,1.0,Easy,,1788866400000,1
+63,Machine Learning,2026-09-08,2.0,Medium,Assignment debugging,1788872520000,1
+64,Chinese (HSK),2026-09-09,0.5,Easy,Listening practice,1788956100000,1
+65,Machine Learning,2026-09-09,2.5,Hard,,1788962460000,1
+66,Computer Networks,2026-09-10,1.0,Hard,,1789046700000,1
+67,Software Engineering,2026-09-10,1.5,Easy,,1789039980000,1
+68,Database Systems,2026-09-11,1.5,Easy,Indexing chapter,1789134780000,1
+69,Database Systems,2026-09-13,2.0,Easy,ER diagram for project,1789301040000,1
+70,Machine Learning,2026-09-15,2.5,Easy,Decision trees chapter,1789479300000,1
+71,Operating Systems,2026-09-16,2.0,Hard,Memory paging problems,1789566900000,1
+72,Database Systems,2026-09-16,2.0,Medium,Indexing chapter,1789558260000,1
+73,Chinese (HSK),2026-09-17,2.0,Easy,Vocabulary flashcards,1789653360000,1
+74,Machine Learning,2026-09-18,2.5,Hard,,1789740360000,1
+75,Operating Systems,2026-09-19,1.5,Medium,Deadlock chapter,1789817040000,1
+76,Machine Learning,2026-09-20,3.0,Hard,,1789906560000,1
+77,Chinese (HSK),2026-09-21,3.0,Easy,Mock reading test,1789991460000,1
+78,Machine Learning,2026-09-21,2.5,Medium,Watched lecture recording,1789994460000,1
+79,Computer Networks,2026-09-22,1.5,Hard,HTTP and DNS review,1790086080000,1
+80,Database Systems,2026-09-22,3.0,Easy,ER diagram for project,1790073540000,1
+81,Computer Networks,2026-09-23,2.5,Medium,Lab report,1790167680000,1
+82,Computer Networks,2026-09-24,0.5,Hard,,1790244360000,1
+83,Machine Learning,2026-09-24,3.0,Hard,Gradient descent notes,1790256720000,1
+84,Chinese (HSK),2026-09-25,1.5,Medium,Mock reading test,1790341020000,1
+85,Database Systems,2026-09-26,2.0,Easy,ER diagram for project,1790430840000,1
+86,Software Engineering,2026-09-26,2.0,Hard,,1790434200000,1
+87,Chinese (HSK),2026-09-26,2.0,Easy,Grammar patterns,1790430960000,1
+88,Software Engineering,2026-09-28,1.5,Easy,Requirements document,1790593200000,1
+89,Software Engineering,2026-09-29,1.0,Medium,Requirements document,1790682420000,1
+90,Machine Learning,2026-09-29,2.0,Hard,Watched lecture recording,1790687760000,1
+91,Software Engineering,2026-09-30,1.0,Hard,Sprint report,1790765880000,1
+92,Computer Networks,2026-09-30,2.5,Easy,Lab report,1790764920000,1
+93,Software Engineering,2026-10-01,1.5,Easy,Requirements document,1790859000000,1
+94,Computer Networks,2026-10-01,2.5,Medium,HTTP and DNS review,1790851080000,1
+95,Chinese (HSK),2026-10-02,1.5,Easy,Grammar patterns,1790937780000,1
+96,Machine Learning,2026-10-02,3.0,Hard,Watched lecture recording,1790936280000,1
+97,Database Systems,2026-10-02,3.0,Easy,Normalization exercises,1790938200000,1

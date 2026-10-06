@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.date)",
+      "as": "dateObj"
+    },
+    {
+      "calculate": "day(datum.dateObj)",
+      "as": "dayNum"
+    },
+    {
+      "calculate": "['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][datum.dayNum]",
+      "as": "dayOfWeek"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "dayOfWeek",
+      "type": "nominal",
+      "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "title": "Day of Week"
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "hours",
+      "type": "quantitative",
+      "title": "Total Hours"
+    }
+  }
+}

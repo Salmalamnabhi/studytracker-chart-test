@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "difficulty",
+      "type": "nominal",
+      "title": "Difficulty"
+    },
+    "y": {
+      "aggregate": "mean",
+      "field": "hours",
+      "type": "quantitative",
+      "title": "Average hours per session"
+    },
+    "color": {
+      "field": "difficulty",
+      "type": "nominal",
+      "legend": null
+    }
+  }
+}

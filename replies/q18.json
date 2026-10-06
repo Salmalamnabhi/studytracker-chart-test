@@ -1,0 +1,29 @@
+{
+  "data": {"url": "class_tasks.csv"},
+  "transform": [
+    {"filter": "datum.isCompleted === 0"},
+    {"filter": "datum.dueDate < '2026-10-05'"},
+    {
+      "aggregate": [{"op": "count", "as": "unfinished_tasks"}],
+      "groupby": ["subject"]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "subject",
+      "type": "nominal",
+      "title": "Subject",
+      "axis": {"labelAngle": -45}
+    },
+    "y": {
+      "field": "unfinished_tasks",
+      "type": "quantitative",
+      "title": "Unfinished tasks"
+    },
+    "tooltip": [
+      {"field": "subject", "type": "nominal", "title": "Subject"},
+      {"field": "unfinished_tasks", "type": "quantitative", "title": "Unfinished tasks"}
+    ]
+  }
+}

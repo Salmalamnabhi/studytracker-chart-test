@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "class_tasks.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "subject",
+      "type": "nominal",
+      "title": "Subject"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Number of Tasks"
+    }
+  }
+}

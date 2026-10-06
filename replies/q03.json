@@ -1,0 +1,20 @@
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"data": {
+"url": "study_sessions.csv"
+},
+"mark": "bar",
+"encoding": {
+"x": {
+"field": "date",
+"type": "temporal",
+"title": "Date"
+},
+"y": {
+"aggregate": "sum",
+"field": "hours",
+"type": "quantitative",
+"title": "Total Hours Studied"
+}
+}
+}

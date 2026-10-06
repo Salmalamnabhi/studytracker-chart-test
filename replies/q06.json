@@ -1,0 +1,30 @@
+{
+  "data": {
+    "url": "class_tasks.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "isCompleted",
+      "type": "nominal",
+      "title": "Completed",
+      "axis": {
+        "labelExpr": "datum.label == '1' ? 'Completed' : 'Not Completed'"
+      }
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Number of Tasks"
+    },
+    "color": {
+      "field": "isCompleted",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [1, 0],
+        "range": ["#4c78a8", "#e45756"]
+      }
+    }
+  }
+}

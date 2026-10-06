@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "hours",
+          "as": "total_hours"
+        }
+      ],
+      "groupby": [
+        "subject"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "sum",
+          "field": "total_hours",
+          "as": "overall_hours"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.total_hours / datum.overall_hours",
+      "as": "proportion"
+    }
+  ],
+  "mark": {
+    "type": "arc",
+    "innerRadius": 50,
+    "tooltip": true
+  },
+  "encoding": {
+    "theta": {
+      "field": "total_hours",
+      "type": "quantitative",
+      "stack": true
+    },
+    "color": {
+      "field": "subject",
+      "type": "nominal",
+      "legend": {
+        "title": "Subject"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "subject",
+        "type": "nominal",
+        "title": "Subject"
+      },
+      {
+        "field": "total_hours",
+        "type": "quantitative",
+        "title": "Total Hours"
+      },
+      {
+        "field": "proportion",
+        "type": "quantitative",
+        "title": "Proportion",
+        "format": ".1%"
+      }
+    ]
+  },
+  "view": {
+    "stroke": null
+  },
+  "title": {
+    "text": "Study Time by Subject",
+    "subtitle": "Is my study time balanced?"
+  }
+}

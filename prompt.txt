@@ -1,0 +1,48 @@
+You are given three CSV files exported from a study-tracking app.
+
+File: study_sessions.csv  (one row = one study session)
+- id (integer)
+- subject (text, e.g. "Database Systems")
+- date (text, YYYY-MM-DD)
+- hours (number, e.g. 1.5)
+- difficulty (text: "Easy", "Medium" or "Hard")
+- note (text, may be empty)
+- timestamp (integer, milliseconds since 1970)
+- userId (integer)
+
+File: class_tasks.csv  (one row = one task)
+- id (text)
+- title (text)
+- description (text, may be empty)
+- subject (text)
+- dueDate (text, YYYY-MM-DD)
+- dueTime (text, HH:MM)
+- priority (integer: 1 = High, 2 = Medium, 3 = Low)
+- isCompleted (integer: 1 = completed, 0 = not completed)
+- reminderEnabled (integer: 1 or 0)
+- reminderMinutes (integer)
+- timestamp (integer, milliseconds since 1970, when the task was created)
+- userId (integer)
+
+File: class_schedules.csv  (one row = one weekly class)
+- id (text)
+- subjectName (text)
+- dayOfWeek (text: "Monday" ... "Sunday")
+- startTime (text, HH:MM)
+- endTime (text, HH:MM)
+- location (text)
+- roomNumber (text)
+- teacherName (text)
+- notes (text, may be empty)
+- reminderEnabled (integer: 1 or 0)
+- reminderMinutes (integer)
+- userId (integer)
+
+Today's date is 2026-10-05.
+
+Task: write one Vega-Lite v5 chart specification that answers the question below.
+Rules:
+- Load the data with "data": {"url": "<file name>"} using exactly one of the three file names above.
+- Return only the JSON specification, with no explanation and no markdown.
+
+Question: <PASTE QUESTION HERE>

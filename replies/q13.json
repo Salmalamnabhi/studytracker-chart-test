@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.date)",
+      "as": "dateObj"
+    },
+    {
+      "calculate": "week(datum.dateObj)",
+      "as": "week"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "week",
+      "type": "ordinal",
+      "title": "Week"
+    },
+    "y": {
+      "aggregate": "distinct",
+      "field": "date",
+      "type": "quantitative",
+      "title": "Number of days studied"
+    }
+  }
+}

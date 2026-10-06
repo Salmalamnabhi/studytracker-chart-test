@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Difficulty distribution over time for Machine Learning study sessions.",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.subject === 'Machine Learning'"
+    },
+    {
+      "calculate": "datum.difficulty === 'Easy' ? 1 : (datum.difficulty === 'Medium' ? 2 : 3)",
+      "as": "difficultyLevel"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "tooltip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "ordinal",
+      "title": "Date",
+      "sort": null
+    },
+    "y": {
+      "aggregate": "mean",
+      "field": "difficultyLevel",
+      "type": "quantitative",
+      "title": "Average Difficulty (1=Easy, 3=Hard)"
+    },
+    "color": {
+      "field": "difficulty",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Easy", "Medium", "Hard"],
+        "range": ["#2ca02c", "#ff7f0e", "#d62728"]
+      },
+      "title": "Difficulty"
+    }
+  }
+}

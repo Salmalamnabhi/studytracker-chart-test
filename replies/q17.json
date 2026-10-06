@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Weekly hours for each subject, as separate lines.",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.date)",
+      "as": "dateObj"
+    },
+    {
+      "timeUnit": "yearweek",
+      "field": "dateObj",
+      "as": "week"
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {
+      "field": "week",
+      "type": "temporal",
+      "title": "Week"
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "hours",
+      "type": "quantitative",
+      "title": "Total hours"
+    },
+    "color": {
+      "field": "subject",
+      "type": "nominal",
+      "title": "Subject"
+    }
+  }
+}

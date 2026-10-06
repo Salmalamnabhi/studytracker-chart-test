@@ -1,0 +1,16 @@
+{
+  "data": {"url": "study_sessions.csv"},
+  "transform": [
+    {"filter": "year(datum.date) === 2026 && month(datum.date) === 8"},
+    {"aggregate": [{"op": "sum", "field": "hours", "as": "total_hours"}], "groupby": ["subject"]}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "subject", "type": "nominal", "title": "Subject"},
+    "y": {"field": "total_hours", "type": "quantitative", "title": "Total Hours"},
+    "tooltip": [
+      {"field": "subject", "type": "nominal", "title": "Subject"},
+      {"field": "total_hours", "type": "quantitative", "title": "Total Hours"}
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Total study hours by difficulty level",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "difficulty",
+      "type": "nominal",
+      "title": "Difficulty",
+      "sort": ["Easy", "Medium", "Hard"]
+    },
+    "y": {
+      "aggregate": "sum",
+      "field": "hours",
+      "type": "quantitative",
+      "title": "Total study hours"
+    },
+    "color": {
+      "field": "difficulty",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": ["Easy", "Medium", "Hard"],
+        "range": ["#4c78a8", "#f58518", "#e45756"]
+      }
+    },
+    "tooltip": [
+      {"field": "difficulty", "type": "nominal", "title": "Difficulty"},
+      {"aggregate": "sum", "field": "hours", "type": "quantitative", "title": "Total hours"}
+    ]
+  }
+}

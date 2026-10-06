@@ -1,0 +1,77 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datetime(datum.timestamp))",
+      "as": "sessionDate"
+    },
+    {
+      "timeUnit": "yearmonthdate",
+      "field": "sessionDate",
+      "as": "day"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "hours",
+          "as": "totalHours"
+        }
+      ],
+      "groupby": [
+        "day"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "rowNumber"
+        }
+      ],
+      "sort": [
+        {
+          "field": "day",
+          "order": "ascending"
+        }
+      ]
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "color": "steelblue"
+  },
+  "encoding": {
+    "x": {
+      "field": "day",
+      "type": "temporal",
+      "title": "Date",
+      "axis": {
+        "format": "%Y-%m-%d",
+        "labelAngle": -45
+      }
+    },
+    "y": {
+      "field": "totalHours",
+      "type": "quantitative",
+      "title": "Total Study Hours"
+    },
+    "tooltip": [
+      {
+        "field": "day",
+        "type": "temporal",
+        "title": "Date"
+      },
+      {
+        "field": "totalHours",
+        "type": "quantitative",
+        "title": "Total Hours"
+      }
+    ]
+  },
+  "width": 800,
+  "height": 300
+}

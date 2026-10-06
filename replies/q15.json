@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "count"
+        }
+      ],
+      "groupby": [
+        "subject",
+        "difficulty"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "count",
+          "as": "total"
+        }
+      ],
+      "groupby": [
+        "subject"
+      ]
+    },
+    {
+      "calculate": "datum.count / datum.total",
+      "as": "share"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "subject",
+      "type": "nominal",
+      "title": "Subject"
+    },
+    "x": {
+      "field": "share",
+      "type": "quantitative",
+      "title": "Share of sessions",
+      "axis": {
+        "format": "%"
+      }
+    },
+    "color": {
+      "field": "difficulty",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Easy",
+          "Medium",
+          "Hard"
+        ],
+        "range": [
+          "#4c78a8",
+          "#f58518",
+          "#e45756"
+        ]
+      },
+      "title": "Difficulty"
+    },
+    "tooltip": [
+      {
+        "field": "subject",
+        "type": "nominal",
+        "title": "Subject"
+      },
+      {
+        "field": "difficulty",
+        "type": "nominal",
+        "title": "Difficulty"
+      },
+      {
+        "field": "share",
+        "type": "quantitative",
+        "title": "Share",
+        "format": ".1%"
+      }
+    ]
+  }
+}

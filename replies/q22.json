@@ -1,0 +1,34 @@
+{
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "subject",
+      "type": "nominal",
+      "sort": "-x",
+      "title": "Subject"
+    },
+    "x": {
+      "aggregate": "sum",
+      "field": "hours",
+      "type": "quantitative",
+      "title": "Total Study Hours"
+    },
+    "color": {
+      "field": "subject",
+      "type": "nominal",
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "aggregate": "sum",
+        "field": "hours",
+        "type": "quantitative",
+        "title": "Total Hours"
+      }
+    ]
+  },
+  "title": "Total Study Hours by Subject (Neglected Subjects Have Low Hours)"
+}

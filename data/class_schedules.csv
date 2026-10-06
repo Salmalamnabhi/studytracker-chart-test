@@ -1,0 +1,12 @@
+id,subjectName,dayOfWeek,startTime,endTime,location,roomNumber,teacherName,notes,reminderEnabled,reminderMinutes,userId
+cf557945-b3ac-e279-3752-354bf10b637f,Database Systems,Monday,08:00,09:40,Building A,201,Prof. Zhang,,1,15,1
+aa2a6ec5-e2ca-a46b-85aa-580ccd72760b,Machine Learning,Monday,14:00,15:40,Building C,305,Prof. Li,,1,15,1
+7d29d3de-346a-e6ac-60a4-dfe8b129be43,Computer Networks,Tuesday,10:00,11:40,Building A,104,Prof. Wang,,1,15,1
+ca32e710-f05d-64b6-e647-008bcb07fcef,Chinese (HSK),Tuesday,16:00,17:40,Language Center,12,Ms. Chen,,1,15,1
+6549e208-7c4b-70e3-76cb-447388467b2b,Operating Systems,Wednesday,08:00,09:40,Building B,210,Prof. Liu,,1,15,1
+030e0bc2-b691-d3b9-4a03-67310bccd4e8,Machine Learning,Wednesday,14:00,15:40,Building C,305,Prof. Li,,1,15,1
+2bdf8ee3-e8c0-800a-4e0f-95f65c0dc65c,Software Engineering,Thursday,10:00,11:40,Building B,118,Prof. Zhao,,1,15,1
+850535d8-6330-721b-d7d5-148a4943e768,Database Systems,Thursday,14:00,16:30,Lab Building,Lab 3,Prof. Zhang,,1,15,1
+ade941ca-4970-b145-5334-c85fb01b65d4,Computer Networks,Friday,08:00,09:40,Lab Building,Lab 1,Prof. Wang,,1,15,1
+c19ddb3b-23ed-2232-4186-9c5326ffc9c4,Chinese (HSK),Friday,10:00,11:40,Language Center,12,Ms. Chen,,1,15,1
+d5a3a191-44d9-fa0e-6e32-5744727f0a0e,Operating Systems,Friday,14:00,15:40,Building B,210,Prof. Liu,,1,15,1

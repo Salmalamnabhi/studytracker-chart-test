@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Average study hours per subject and difficulty.",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "subject",
+      "type": "nominal",
+      "title": "Subject",
+      "axis": {
+        "labelAngle": -45
+      }
+    },
+    "y": {
+      "aggregate": "mean",
+      "field": "hours",
+      "type": "quantitative",
+      "title": "Average Study Hours"
+    },
+    "color": {
+      "field": "difficulty",
+      "type": "nominal",
+      "title": "Difficulty",
+      "scale": {
+        "domain": ["Easy", "Medium", "Hard"],
+        "range": ["#4c78a8", "#f58518", "#e45756"]
+      }
+    },
+    "xOffset": {
+      "field": "difficulty"
+    },
+    "tooltip": [
+      {
+        "field": "subject",
+        "type": "nominal",
+        "title": "Subject"
+      },
+      {
+        "field": "difficulty",
+        "type": "nominal",
+        "title": "Difficulty"
+      },
+      {
+        "aggregate": "mean",
+        "field": "hours",
+        "type": "quantitative",
+        "title": "Average Hours",
+        "format": ".1f"
+      },
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Sessions"
+      }
+    ]
+  }
+}

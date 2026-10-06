@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega-lite.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "class_schedules.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "dayOfWeek",
+      "type": "ordinal",
+      "sort": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "title": "Day of Week"
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Number of Classes"
+    }
+  }
+}

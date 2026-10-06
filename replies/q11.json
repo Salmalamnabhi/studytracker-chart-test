@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "calculate": "toDate(datum.date)",
+      "as": "dateObj"
+    },
+    {
+      "calculate": "timeFormat(datum.dateObj, '%Y-%m-%d')",
+      "as": "dateStr"
+    },
+    {
+      "timeUnit": "yearweek",
+      "field": "dateObj",
+      "as": "week"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "hours",
+          "as": "totalHours"
+        }
+      ],
+      "groupby": ["week"]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "week",
+      "type": "temporal",
+      "title": "Week",
+      "axis": {
+        "format": "%Y-%m-%d",
+        "labelAngle": 45
+      }
+    },
+    "y": {
+      "field": "totalHours",
+      "type": "quantitative",
+      "title": "Total Hours"
+    },
+    "tooltip": [
+      {
+        "field": "week",
+        "type": "temporal",
+        "title": "Week",
+        "format": "%Y-%m-%d"
+      },
+      {
+        "field": "totalHours",
+        "type": "quantitative",
+        "title": "Total Hours",
+        "format": ".2f"
+      }
+    ]
+  }
+}

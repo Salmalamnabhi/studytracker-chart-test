@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Consistency of study sessions over time: daily total study hours, with a smoothed trend line.",
+  "data": {
+    "url": "study_sessions.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datetime(datum.date)",
+      "as": "dateParsed"
+    },
+    {
+      "timeUnit": "yearmonthdate",
+      "field": "dateParsed",
+      "as": "day"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "hours",
+          "as": "totalHours"
+        }
+      ],
+      "groupby": ["day"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "opacity": 0.5,
+        "size": 30
+      },
+      "encoding": {
+        "x": {
+          "field": "day",
+          "type": "temporal",
+          "title": "Date"
+        },
+        "y": {
+          "field": "totalHours",
+          "type": "quantitative",
+          "title": "Total study hours"
+        },
+        "tooltip": [
+          {
+            "field": "day",
+            "type": "temporal",
+            "title": "Date"
+          },
+          {
+            "field": "totalHours",
+            "type": "quantitative",
+            "title": "Hours"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "orange",
+        "size": 2
+      },
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "mean",
+              "field": "totalHours",
+              "as": "rollingMean"
+            }
+          ],
+          "frame": [-3, 3],
+          "sort": [
+            {
+              "field": "day"
+            }
+          ]
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "day",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "rollingMean",
+          "type": "quantitative",
+          "title": "Total study hours"
+        }
+      }
+    }
+  ],
+  "width": 600,
+  "height": 400
+}

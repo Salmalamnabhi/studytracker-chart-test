@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "class_schedules.csv"
+  },
+  "transform": [
+    {
+      "calculate": "(toNumber(split(datum.endTime, ':')[0]) * 60 + toNumber(split(datum.endTime, ':')[1]) - (toNumber(split(datum.startTime, ':')[0]) * 60 + toNumber(split(datum.startTime, ':')[1]))) / 60",
+      "as": "hours"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "hours",
+          "as": "weeklyHours"
+        }
+      ],
+      "groupby": [
+        "subjectName"
+      ]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "subjectName",
+      "type": "nominal",
+      "title": "Subject"
+    },
+    "y": {
+      "field": "weeklyHours",
+      "type": "quantitative",
+      "title": "Weekly Hours"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+id,title,description,subject,dueDate,dueTime,priority,isCompleted,reminderEnabled,reminderMinutes,timestamp,userId
+158a59ae-1e29-d18f-b7cc-021bfa511f85,Vocabulary list 5 (part 2),,Chinese (HSK),2026-07-13,18:00,1,1,0,60,1783473780000,1
+34c778f6-a13f-1127-016f-a6684e2f72d7,Midterm revision,,Operating Systems,2026-07-16,09:00,1,1,0,30,1783907640000,1
+08b6639f-ebfd-adc5-a298-ab8779476af8,Lab: stored procedures (part 2),,Database Systems,2026-07-19,18:00,3,1,0,30,1783945020000,1
+cdb75e91-c08b-fcd6-32e1-5bb30d060ce2,Lab report: routing (part 2),,Computer Networks,2026-07-19,12:00,3,1,1,15,1784105340000,1
+39d2badb-f2fd-4211-514d-1d86e9fabac9,Lab report: routing,,Computer Networks,2026-07-20,18:00,2,1,1,15,1783863360000,1
+1ea26af2-176d-1d72-6b3e-8c80507e30fe,Quiz revision,,Computer Networks,2026-07-21,18:00,3,0,0,60,1783669620000,1
+2656685e-c848-11e7-17f4-1019b45590c1,Lab: scheduler simulation (part 2),,Operating Systems,2026-07-23,23:59,3,1,1,15,1783906320000,1
+349f5a6c-2697-2eea-9f15-b224861beadf,Lab: stored procedures,,Database Systems,2026-07-25,18:00,3,1,0,60,1784377740000,1
+5ec8dfb1-9e3d-b699-17c4-6f11f69336ba,Homework: subnetting (part 2),,Computer Networks,2026-07-29,23:59,1,1,0,60,1785036300000,1
+f51ad83a-5b1e-6077-dcb3-7082a53c20c4,Assignment 1: regression (part 2),,Machine Learning,2026-07-31,09:00,3,1,1,15,1785157080000,1
+17526ffb-b990-d360-8c7f-a62a413aa6db,Sprint 2 report,,Software Engineering,2026-07-31,12:00,3,1,1,15,1784448720000,1
+59fa6405-e889-f289-5653-3d0b193ca149,Lab: synchronization,,Operating Systems,2026-08-03,12:00,2,0,0,15,1785396660000,1
+4d32a879-9a26-88c3-b380-0e4532ec90ed,Read paper for seminar (part 2),,Machine Learning,2026-08-04,12:00,2,0,1,30,1784692320000,1
+3698f584-20cb-c7fb-2a9c-cf2805171c9e,Mock test 2,,Chinese (HSK),2026-08-06,23:59,2,1,1,60,1785744120000,1
+1801f648-5182-4e0c-d73f-213da0482e8c,Assignment 2: classification,,Machine Learning,2026-08-07,18:00,3,1,1,60,1785384060000,1
+0d846e8a-cda9-84e9-fb1a-c5f3b408ebb2,Essay practice,,Chinese (HSK),2026-08-07,23:59,3,1,0,60,1785721560000,1
+aee127e0-4085-a320-8d63-2e1431b6130e,Project: schema design (part 2),,Database Systems,2026-08-10,09:00,2,1,1,30,1785899340000,1
+7a3a3cb1-80e8-1aa1-fc43-405e867735b0,Lab: scheduler simulation,,Operating Systems,2026-08-10,23:59,1,1,0,30,1785806340000,1
+1f0ac651-024a-e9f7-af5a-1200f480a9a2,Assignment 2: classification (part 2),,Machine Learning,2026-08-13,09:00,2,0,1,30,1785990540000,1
+6508e380-18ad-80a2-546c-34dad0d7a4dc,Sprint 1 report,,Software Engineering,2026-08-15,23:59,2,1,1,60,1786000440000,1
+5e3617eb-d96e-837e-603b-4d1f6583bfbb,Midterm revision (part 2),,Machine Learning,2026-08-18,12:00,2,1,1,30,1786248300000,1
+131f0462-f797-cd65-6412-e5855c024005,Project: final report,,Database Systems,2026-08-19,09:00,1,1,1,60,1786259040000,1
+6f5ce069-c1a0-dbac-4a84-c0141164874f,Assignment 1: regression,,Machine Learning,2026-08-22,09:00,1,1,0,60,1786154340000,1
+24a9248d-a00d-c09f-bfec-adab3b248797,UML submission (part 2),,Software Engineering,2026-08-22,18:00,1,0,0,30,1787105640000,1
+0668d65a-eed5-b0f9-a0a1-7f51eb0ff007,Mock test 2 (part 2),,Chinese (HSK),2026-08-23,12:00,1,1,0,30,1787101920000,1
+dc1c35b6-5189-9e26-defe-520b653af492,Vocabulary list 5,,Chinese (HSK),2026-08-24,18:00,1,1,0,15,1786686540000,1
+983aafb3-342a-ff74-2b67-d1329e76bf58,Homework: paging (part 2),,Operating Systems,2026-08-25,09:00,3,0,0,15,1787222700000,1
+264a1db3-4fc7-0a2c-6a26-b86f0d12833e,Project: schema design,,Database Systems,2026-08-29,18:00,2,1,0,60,1787115540000,1
+732192d7-8e0a-3928-abae-353c968434dd,Sprint 2 report (part 2),,Software Engineering,2026-08-30,09:00,1,0,1,15,1787736780000,1
+a2ce7540-a2b5-7738-70eb-55717a5d8682,Quiz revision,,Database Systems,2026-09-01,12:00,3,1,0,30,1787212320000,1
+e786b33e-1d24-4a60-bb6a-bab321cff16d,Register for HSK exam (part 2),,Chinese (HSK),2026-09-02,12:00,3,1,0,15,1787813460000,1
+93682835-ad15-3982-d78a-c0225b9f80bc,Read paper for seminar,,Machine Learning,2026-09-03,23:59,2,1,1,60,1787371320000,1
+a24cc76b-8e09-d843-4106-acfbf00c9c42,Midterm revision,,Machine Learning,2026-09-05,18:00,1,0,1,60,1787891640000,1
+f7b65da3-4228-718b-1fa0-b5ae4e932b83,Project: final report (part 2),,Database Systems,2026-09-09,23:59,2,1,0,30,1787710380000,1
+46a02dfc-0bd7-dc82-a17c-0253177ecd71,Homework: subnetting,,Computer Networks,2026-09-09,23:59,1,1,1,60,1787723040000,1
+d07a2e4b-3964-3523-43fc-edc760457424,UML submission,,Software Engineering,2026-09-09,23:59,3,0,1,15,1787832600000,1
+1f7d36f4-6b64-7a22-831f-ad4719cb1b74,Midterm revision (part 2),,Operating Systems,2026-09-13,18:00,1,1,0,15,1788436500000,1
+e84b6e49-c32f-b1e0-2b46-d4931fb9ec2c,Register for HSK exam,,Chinese (HSK),2026-09-13,18:00,3,1,0,15,1788403260000,1
+870898f3-03cc-22ae-2c80-0adffb296c01,Group presentation slides,,Software Engineering,2026-09-17,12:00,3,1,1,15,1788519000000,1
+218da4c7-a27c-f239-5040-a654a054ddcf,Quiz revision (part 2),,Computer Networks,2026-09-22,09:00,1,1,0,30,1789819320000,1
+67117c5b-aa4a-2f89-05ed-4d8becd1b138,Lab: synchronization (part 2),,Operating Systems,2026-09-25,23:59,3,1,1,30,1789968660000,1
+1088a172-7944-9514-5c10-bb61f0248f25,Quiz revision (part 2),,Database Systems,2026-09-26,12:00,2,1,1,60,1789909860000,1
+d30417bc-f0e6-4582-86a6-14b67879e9ec,Group presentation slides (part 2),,Software Engineering,2026-09-26,12:00,2,1,1,30,1789188060000,1
+77926540-f1e2-0565-3942-af9485850845,Sprint 1 report (part 2),,Software Engineering,2026-10-01,09:00,1,1,1,15,1790406600000,1
+a7c809f1-8e61-d464-dd7a-35259832251a,Mock test 1 (part 2),,Chinese (HSK),2026-10-01,23:59,2,1,0,15,1789884120000,1
+dc6a5a05-0481-84a1-9141-22a71db1c57f,Essay practice (part 2),,Chinese (HSK),2026-10-04,12:00,1,1,0,60,1790137080000,1
+4dbb0891-17c3-eb93-4191-a45357163595,Homework: normalization (part 2),,Database Systems,2026-10-06,09:00,1,0,0,60,1790309520000,1
+4747f6d8-7b27-2ae2-c6b6-52b846172613,Lab report: Wireshark (part 2),,Computer Networks,2026-10-07,23:59,1,0,0,60,1790938740000,1
+671ea94e-9690-7628-dafd-5fc0b0346b55,Mock test 1,,Chinese (HSK),2026-10-09,09:00,1,0,0,15,1790564760000,1
+156848b5-5b00-6306-3d00-e2df6694c9ac,Homework: paging,,Operating Systems,2026-10-11,09:00,2,0,0,15,1791339540000,1
+bc5ab583-8fd5-6b45-d57e-af43f85d1813,Homework: normalization,,Database Systems,2026-10-15,09:00,3,0,1,30,1791775680000,1
+39ba2540-c613-e610-b8c7-42b5387a0a05,Lab report: Wireshark,,Computer Networks,2026-10-15,18:00,1,0,1,30,1791706260000,1
+eeeffd00-7739-6758-6ef2-4fb40552a7fb,Project proposal,,Machine Learning,2026-10-18,09:00,1,0,0,30,1791208200000,1
+da64275d-bd88-d912-ceab-f65ee321592e,Project proposal (part 2),,Machine Learning,2026-10-19,18:00,2,0,0,15,1791175560000,1

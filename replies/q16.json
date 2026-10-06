@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Task completion rate per subject.",
+  "data": {
+    "url": "class_tasks.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "isCompleted",
+          "as": "completionRate"
+        }
+      ],
+      "groupby": ["subject"]
+    },
+    {
+      "calculate": "datum.completionRate * 100",
+      "as": "completionRate"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "subject",
+      "type": "nominal",
+      "axis": {
+        "title": "Subject",
+        "labelAngle": -45
+      }
+    },
+    "y": {
+      "field": "completionRate",
+      "type": "quantitative",
+      "axis": {
+        "title": "Completion rate (%)"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "subject",
+        "type": "nominal",
+        "title": "Subject"
+      },
+      {
+        "field": "completionRate",
+        "type": "quantitative",
+        "title": "Completion rate (%)",
+        "format": ".1f"
+      }
+    ]
+  }
+}

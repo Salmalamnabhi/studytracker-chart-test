@@ -1,0 +1,62 @@
+{
+  "data": {
+    "url": "class_tasks.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.isCompleted == 1 ? 'Completed' : 'Not Completed'",
+      "as": "status"
+    },
+    {
+      "calculate": "datum.priority == 1 ? 'High' : (datum.priority == 2 ? 'Medium' : 'Low')",
+      "as": "priorityLabel"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "priorityLabel",
+      "type": "nominal",
+      "title": "Priority",
+      "sort": ["High", "Medium", "Low"]
+    },
+    "y": {
+      "aggregate": "count",
+      "type": "quantitative",
+      "title": "Number of Tasks"
+    },
+    "color": {
+      "field": "status",
+      "type": "nominal",
+      "title": "Status",
+      "scale": {
+        "domain": ["Completed", "Not Completed"],
+        "range": ["#4c78a8", "#e45756"]
+      }
+    },
+    "xOffset": {
+      "field": "status",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "priorityLabel",
+        "type": "nominal",
+        "title": "Priority"
+      },
+      {
+        "field": "status",
+        "type": "nominal",
+        "title": "Status"
+      },
+      {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Count"
+      }
+    ]
+  },
+  "title": "Task Completion by Priority",
+  "width": 400,
+  "height": 300
+}

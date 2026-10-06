@@ -1,0 +1,31 @@
+﻿No,Level,Question,Outcome,Notes,Reply file
+1,Easy,Total hours per subject,Correct,,replies/q01.json
+2,Easy,Number of study sessions per subject,Correct,,replies/q02.json
+3,Easy,Hours studied each day,Correct,,replies/q03.json
+4,Easy,"How many sessions were Easy, Medium and Hard?",Correct,"Bars in alphabetical order (Easy, Hard, Medium), not natural order",replies/q04.json
+5,Easy,Number of tasks per subject,Correct,,replies/q05.json
+6,Easy,How many tasks are completed and how many are not?,Broken,"Counts computed, but bars invisible. Cause: colour scale domain uses the numbers [1, 0] while Vega-Lite read isCompleted from the CSV as text. Confirmed: changing the domain to [""1"", ""0""] draws both bars (17 and 37).",replies/q06.json
+7,Easy,Number of tasks at each priority level,Correct,"Correct, but did not use the High/Medium/Low labels",replies/q07.json
+8,Easy,Average session length per subject,Correct,,replies/q08.json
+9,Easy,Number of classes on each day of the week,Correct,Days in Monday-Sunday order (explicit sort). Harmless typo in the $schema URL,replies/q09.json
+10,Easy,Total hours per month,Correct,Thin bars: months on a continuous time axis,replies/q10.json
+11,Medium,Total hours per week,Correct,Weeks start on Sunday (Vega default); totals correct,replies/q11.json
+12,Medium,Hours per subject in September 2026 only,Correct,"Filter correct, including month index 8 = September (months are 0-based in Vega)",replies/q12.json
+13,Medium,Number of days I studied in each week,Correct,"Used distinct dates; weeks start on Sunday; x-axis shows week numbers, not dates",replies/q13.json
+14,Medium,"Total hours by day of the week, Monday to Sunday",Correct,Days derived from date and ordered Monday-Sunday,replies/q14.json
+15,Medium,"Share of Easy, Medium and Hard sessions within each subject",Correct,"Stack order is Easy-Hard-Medium (alphabetical), legend order differs",replies/q15.json
+16,Medium,"Task completion rate per subject, as a percentage",Correct,,replies/q16.json
+17,Medium,"Weekly hours for each subject, as separate lines",Correct,"One line per subject; weeks with no session for a subject are skipped, not shown as zero",replies/q17.json
+18,Medium,"Unfinished tasks that were due before 5 October 2026, per subject",Broken,"Empty chart. Cause: filter uses strict equality (isCompleted === 0) but the CSV value is the text '0', so no row passes. Confirmed: changing === to == draws the correct 9 tasks.",replies/q18.json
+19,Medium,Average hours per session for each difficulty level,Correct,"Order not kept (Easy, Hard, Medium instead of Easy-Medium-Hard)",replies/q19.json
+20,Medium,Class hours per week for each subject,Correct,Computed class length from endTime minus startTime (no duration column exists) and summed per subject,replies/q20.json
+21,Vague,Am I getting more consistent?,Wrong calculation,"Measured daily hours with rolling average (volume), not regularity; days with no study are not shown as zero. My app defines consistency as consecutive study days (streak); model chose volume",replies/q21.json
+22,Vague,Which subject am I neglecting?,Correct,"Total hours per subject, highest on top; the neglected (lowest) subject would be clearer on top",replies/q22.json
+23,Vague,When do I study best?,Wrong column,"Ignored ""when"": grouped by subject and difficulty, no time column used; interpreted ""best"" as longest sessions. the bars are ordered Easy, Hard, Medium. Database Systems has no Hard bar and Operating Systems no Easy bar.",replies/q23.json
+24,Vague,Was there a period when I fell off?,Broken,"Right idea (hours over time) but used the timestamp column, which was read as text; datetime() of that text is invalid (NaN), so all 167 hours collapsed into one bar.",replies/q24.json
+25,Vague,Is Machine Learning getting easier for me?,Correct,"Filtered to Machine Learning and plotted difficulty (1-3) per session date; reasonable, but no trend line, so 'getting easier' must be judged by eye",replies/q25.json
+26,Vague,Am I keeping up with my tasks?,Correct,"Chose completion by priority (reasonable); ignores due dates, so not-yet-due tasks count as unfinished. Worked because it used loose equality (== 1), unlike question 18",replies/q26.json
+27,Vague,Do I spend my time on what is hardest?,Correct,"Chose total hours by difficulty (direct answer, no subject split); bars in natural order",replies/q27.json
+28,Vague,Is my study time balanced?,Correct,Donut of hours per subject: reasonable for 'balanced'.,replies/q28.json
+29,Vague,Did I work harder near the end?,Wrong calculation,"Read ""the end"" as end of the week (weekday vs weekend); no time trend shown; also compares 5 days against 2 using totals",replies/q29.json
+30,Vague,How is my studying going overall?,Correct,"Daily hours over time: sensible but noisy; skipped days hidden by connecting line; only one aspect of ""overall""",replies/q30.json

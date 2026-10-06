@@ -1,0 +1,15 @@
+{
+  "data": {"url": "study_sessions.csv"},
+  "transform": [
+    {"filter": "datum.date !== null && datum.date !== ''"},
+    {"calculate": "toDate(datum.date)", "as": "dateObj"},
+    {"calculate": "day(datum.dateObj)", "as": "dayOfWeek"},
+    {"calculate": "datum.dayOfWeek === 0 || datum.dayOfWeek === 6 ? 'Weekend' : 'Weekday'", "as": "dayType"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "dayType", "type": "nominal", "title": "Day Type"},
+    "y": {"aggregate": "sum", "field": "hours", "type": "quantitative", "title": "Total Study Hours"},
+    "color": {"field": "dayType", "type": "nominal", "legend": null}
+  }
+}
